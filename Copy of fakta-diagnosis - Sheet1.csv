@@ -1,0 +1,65 @@
+No,Ciri-ciri,Ciri-Ciri Kecerdasan,Prodi,Cluster,MB,MD,CF
+1,"Dalam berargumentasi, cenderung membandingkan lawan dengan seseorang atau sesuatu yang pernah dibaca atau dengar lalu bereaksi",Kecerdasan Naturalis,Biologi,Saintek,0.9,0.4,0.5
+2,"Senang mempelajari nama-nama makhluk hidup di lingkungan, seperti bunga dan pohon",Kecerdasan Naturalis,Biologi,Saintek,0.9,0.1,0.8
+3,"Mempunyai minat cukup besar pada alam, ekologi, tanaman atau binatang.",Kecerdasan Naturalis,Biologi,Saintek,0.9,0.1,0.8
+4,"Mampu mengerjakan dengan baik tugas / kegiatan yang berkaitan dengan sistem kehidupan (biologi, ilmu alam).",Kecerdasan Naturalis,Biologi,Saintek,0.9,0.1,0.8
+5,Menyukai mata pelajaran Biologi,Kecerdasan Naturalis,Biologi,Saintek,0.9,0.1,0.8
+6,"Mempunyai minat cukup besar pada alam, ekologi, tanaman atau binatang.",Kecerdasan Naturalis,Peternakan,Saintek,0.9,0.1,0.8
+7,"Suka berkelana, hiking, atau sekedar jalan-jalan di alam terbuka.",Kecerdasan Naturalis,Peternakan,Saintek,0.9,0.2,0.7
+8,Menyukai pembahasan tentang kehidupan.,Kecerdasan Naturalis,Peternakan,Saintek,0.9,0.3,0.6
+9,"Mampu mengerjakan dengan baik tugas / kegiatan yang berkaitan dengan sistem kehidupan (biologi, ilmu alam).",Kecerdasan Naturalis,Peternakan,Saintek,0.9,0.1,0.8
+10,Menyukai mata pelajaran Biologi,Kecerdasan Naturalis,Peternakan,Saintek,0.9,0.1,0.8
+11,Menikmati kegiatan yang menantang bahaya atau pengalaman fisik yang menegangkan.,Kecerdasan Kinestetik,Kedokteran Gigi,Saintek,0.9,0.3,0.6
+12,Suka pekerjaan yang melibatkan keterampilan tangan.,Kecerdasan Kinestetik,Kedokteran Gigi,Saintek,0.9,0.1,0.8
+13,"Dalam berargumentasi, cenderung meminta bantuan teman atau pihak- pihak yang memiliki otoritas (ahli) dalam bidang tersebut.",Kecerdasan Kinestetik,Kedokteran Gigi,Saintek,0.9,0.1,0.8
+14,Menyukai kegiatan-kegiatan seperti menjahit dan membuat bentuk-bentuk.,Kecerdasan Kinestetik,Kedokteran Gigi,Saintek,0.9,0.1,0.8
+15,"Harus mempraktikan sesuatu keterampilan yang baru, tidak sekedar membaca atau melihat.",Kecerdasan Kinestetik,Kedokteran Gigi,Saintek,0.9,0.1,0.8
+16,Menyukai mata pelajaran Biologi,Kecerdasan Kinestetik,Teknik Mesin,Saintek,0.9,0.1,0.8
+17,"Jika sesuatu rusak dan tidak berfungsi, cenderung memisahkan setiap bagian lalu menggabungkannya kembali.",Kecerdasan Kinestetik,Teknik Mesin,Saintek,0.9,0.1,0.8
+18,"Harus mempraktikan sesuatu keterampilan yang baru, tidak sekedar membaca atau melihat.",Kecerdasan Kinestetik,Teknik Mesin,Saintek,0.9,0.1,0.8
+19,Suka pekerjaan yang melibatkan keterampilan tangan.,Kecerdasan Kinestetik,Teknik Mesin,Saintek,0.9,0.2,0.7
+20,Penting untuk menyentuh benda yang baru ditemukan untuk melengkapi informasi mengenai benda tersebut.,Kecerdasan Kinestetik,Teknik Mesin,Saintek,0.9,0.2,0.7
+21,Menyukai mata pelajaran Fisika,Kecerdasan Kinestetik,Teknik Mesin,Saintek,0.9,0.2,0.7
+22,Menyukai mata pelajaran Matematika umum,Kecerdasan Kinestetik,Teknik Mesin,Saintek,0.9,0.2,0.7
+23,"Menyukai permainan yang menggunakan logika, seperti teka-teki angka.",Kecerdasan Logika-Matematik,Ilmu Komputer,Saintek,0.9,0.1,0.8
+24,"Jika harus mengingat sesuatu, cenderung menempatkan setiap kejadian dalam urutan yang logis.",Kecerdasan Logika-Matematik,Ilmu Komputer,Saintek,0.9,0.1,0.8
+25,Menyukai komputer dan berbagai permainan angka-angka.,Kecerdasan Logika-Matematik,Ilmu Komputer,Saintek,0.9,0.1,0.8
+26,"Jika sesuatu rusak dan tidak berfungsi, akan melihat bagian-bagiannya dan mencari tahu bagaimana cara kerjanya.",Kecerdasan Logika-Matematik,Ilmu Komputer,Saintek,0.9,0.3,0.6
+27,Senang mencari tahu bagaimana cara kerja setiap benda.,Kecerdasan Logika-Matematik,Ilmu Komputer,Saintek,0.9,0.4,0.5
+28,Menyukai mata pelajaran matematika umum,Kecerdasan Logika-Matematik,Ilmu Komputer,Saintek,0.9,0.2,0.7
+29,Menyukai mata pelajaran informatika,Kecerdasan Logika-Matematik,Ilmu Komputer,Saintek,0.9,0.1,0.8
+30,Menyukai mata pelajaran matematika tingkat lanjut,Kecerdasan Logika-Matematik,Ilmu Komputer,Saintek,0.9,0.1,0.8
+31,Dapat memecahkan soal-soal hitungan.,Kecerdasan Logika-Matematik,Statistika,Saintek,0.9,0.1,0.8
+32,Dapat menghitung angka di luar kepala dengan mudah.,Kecerdasan Logika-Matematik,Statistika,Saintek,0.9,0.2,0.7
+33,"Menyukai permainan yang menggunakan logika, seperti teka-teki angka.",Kecerdasan Logika-Matematik,Statistika,Saintek,0.9,0.3,0.6
+34,"Menyukai permainan catur, sudoku, atau monopoli.",Kecerdasan Logika-Matematik,Statistika,Saintek,0.9,0.5,0.4
+35,"Suka berpikir melalui masalah dengan hati-hati, mempertimbangkan segala konsekuensinya.",Kecerdasan Logika-Matematik,Statistika,Saintek,0.9,0.4,0.6
+36,Menyukai mata pelajaran statistika,Kecerdasan Logika-Matematik,Statistika,Saintek,0.9,0.1,0.8
+37,Menyukai mata pelajaran matematika tingkat lanjut,Kecerdasan Logika-Matematik,Statistika,Saintek,0.9,0.1,0.8
+38,Menyukai mata pelajaran matematika umum,Kecerdasan Logika-Matematik,Statistika,Saintek,0.9,0.1,0.8
+39,Mampu bergaul baik dengan orang lain.,Kecerdasan Interpersonal,Psikologi,Soshum,0.9,0.2,0.7
+40,"Sering didatangi orang untuk dimintai nasehat atau saran, baik di sekolah maupun di lingkungan tempat tinggal.",Kecerdasan Interpersonal,Psikologi,Soshum,0.9,0.1,0.8
+41,"Dalam berargumentasi, cenderung meminta bantuan teman atau pihak- pihak yang memiliki otoritas (ahli) dalam bidang tersebut.",Kecerdasan Interpersonal,Psikologi,Soshum,0.9,0.2,0.7
+42,Menyukai mata pelajaran Sosiologi,Kecerdasan Interpersonal,Psikologi,Soshum,0.9,0.1,0.8
+43,Menyukai mata pelajaran Matematika umum,Kecerdasan Interpersonal,Psikologi,Soshum,0.9,0.2,0.7
+44,Memiliki ingatan yang baik untuk hal-hal yang sepele.,Kecerdasan Linguistik-Verbal,Ilmu Hukum,Soshum,0.9,0.2,0.7
+45,Seorang pembicara yang baik.,Kecerdasan Linguistik-Verbal,Ilmu Hukum,Soshum,0.9,0.2,0.7
+46,Memiliki kosakata yang cukup banyak sehingga tidak ada hambatan atau kesulitan dalam berkomunikasi dengan berbagai kalangan.,Kecerdasan Linguistik-Verbal,Ilmu Hukum,Soshum,0.9,0.1,0.8
+47,Menyukai perdebatan dan diskusi.,Kecerdasan Linguistik-Verbal,Ilmu Hukum,Soshum,0.9,0.1,0.8
+48,Hobi membaca buku.,Kecerdasan Linguistik-Verbal,Ilmu Hukum,Soshum,0.9,0.2,0.7
+49,Menyukai mata pelajaran Sosiologi,Kecerdasan Linguistik-Verbal,Ilmu Hukum,Soshum,0.9,0.1,0.8
+50,Menyukai mata pelajaran Ppkn,Kecerdasan Linguistik-Verbal,Ilmu Hukum,Soshum,0.9,0.1,0.8
+51,Seorang pembicara yang baik.,Kecerdasan Linguistik-Verbal,Ilmu Hubungan Internasional,Soshum,0.9,0.1,0.8
+52,Memiliki kosakata yang cukup banyak sehingga tidak ada hambatan atau kesulitan dalam berkomunikasi dengan berbagai kalangan.,Kecerdasan Linguistik-Verbal,Ilmu Hubungan Internasional,Soshum,0.9,0.1,0.8
+53,Menyukai perdebatan dan diskusi.,Kecerdasan Linguistik-Verbal,Ilmu Hubungan Internasional,Soshum,0.9,0.1,0.8
+54,Suka bercerita.,Kecerdasan Linguistik-Verbal,Ilmu Hubungan Internasional,Soshum,0.9,0.4,0.6
+55,Senang membicarakan dan menulis ide-ide yang ada di otak.,Kecerdasan Linguistik-Verbal,Ilmu Hubungan Internasional,Soshum,0.9,0.2,0.7
+56,Menyukai mata pelajaran Sosiologi,Kecerdasan Linguistik-Verbal,Ilmu Hubungan Internasional,Soshum,0.9,0.1,0.8
+57,Menyukai mata pelajaran Ppkn,Kecerdasan Linguistik-Verbal,Ilmu Hubungan Internasional,Soshum,0.9,0.2,0.7
+58,Menyukai pembahasan tentang kehidupan.,Kecerdasan Eksistensial,Filsafat,Soshum,0.9,0.1,0.8
+59,Menikmati membaca filsuf kuno dan modern.,Kecerdasan Eksistensial,Filsafat,Soshum,0.9,0.1,0.8
+60,Belajar hal-hal baru lebih mudah ketika memahaminya.,Kecerdasan Eksistensial,Filsafat,Soshum,0.9,0.2,0.7
+61,Ingin mengetahui apakah ada bentuk-bentuk lain dari kehidupan di alam semesta.,Kecerdasan Eksistensial,Filsafat,Soshum,0.9,0.2,0.7
+62,Mempelajari sejarah dan budaya kuno membantu memberi suatu pandangan yang nyata.,Kecerdasan Eksistensial,Filsafat,Soshum,0.9,0.2,0.7
+63,Menyukai mata pelajaran Antropologi,Kecerdasan Eksistensial,Filsafat,Soshum,0.9,0.3,0.6
+64,Menyukai mata pelajaran Sejarah Indonesia,Kecerdasan Eksistensial,Filsafat,Soshum,0.9,0.4,0.5
