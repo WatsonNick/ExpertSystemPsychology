@@ -32,7 +32,7 @@ data_kecerdasan= [(statement, categories) for statement, categories in data_kece
 data_prodi= [(statement, categories) for statement, categories in data_prodi_dict.items()]
 
 daftar_skor = {
-    "Sangat Setuju": 1.0, "Setuju": 0.6, "Mungkin": 0.2, "Tidak Setuju": -0.4, "Sangat Tidak Setuju": -1.0
+    "Sangat Setuju": 1.0, "Setuju": 0.6, "Mungkin": 0.2, "Tidak Setuju": -0.4, "Sangat Tidak Setuju": -0.9
 }
 
 #-------------------------------------------------------------------------------------------------------------------------
