@@ -32,7 +32,7 @@ data_kecerdasan= [(statement, categories) for statement, categories in data_kece
 data_prodi= [(statement, categories) for statement, categories in data_prodi_dict.items()]
 
 daftar_skor = {
-    "Sangat Setuju": 1.0, "Setuju": 0.6, "Mungkin": 0.2, "Tidak Setuju": -0.4, "Sangat Tidak Setuju": -0.9
+    "Sangat Setuju": 1.0, "Setuju": 0.6, "Mungkin": 0.2, "Tidak Setuju": -0.4, "Sangat Tidak Setuju": -1.0
 }
 
 #-------------------------------------------------------------------------------------------------------------------------
@@ -69,11 +69,25 @@ log_kecerdasan = {}
 for statement, answer in data_kecerdasan:
     cf_evidence = user_answers[statement]
     for tipe_cerdas, cf_pakar in answer.items():
-        cf_value = cf_evidence * cf_pakar
+        cf_value = cf_evidence * cf_pakar  # Hitung nilai CF baru
         if tipe_cerdas in cf_kecerdasan:
             old_value = cf_kecerdasan[tipe_cerdas]
-            cf_kecerdasan[tipe_cerdas] = old_value + cf_value * (1 - old_value)
-            log_kecerdasan[tipe_cerdas].append(f"CF = {old_value:.2f} + ({cf_value:.2f} * (1 - {old_value:.2f}) = {cf_kecerdasan[tipe_cerdas]:.2f}")
+            # Menentukan aturan yang digunakan berdasarkan tanda CF
+            if old_value >= 0 and cf_value >= 0:  # Keduanya positif
+                cf_kecerdasan[tipe_cerdas] = old_value + cf_value * (1 - old_value)
+                log_kecerdasan[tipe_cerdas].append(
+                    f"CF = {old_value:.2f} + ({cf_value:.2f} * (1 - {old_value:.2f})) = {cf_kecerdasan[tipe_cerdas]:.2f}"
+                )
+            elif old_value < 0 and cf_value < 0:  # Keduanya negatif
+                cf_kecerdasan[tipe_cerdas] = old_value + cf_value * (1 + old_value)
+                log_kecerdasan[tipe_cerdas].append(
+                    f"CF = {old_value:.2f} + ({cf_value:.2f} * (1 + {old_value:.2f})) = {cf_kecerdasan[tipe_cerdas]:.2f}"
+                )
+            else:  # Satu positif, satu negatif
+                cf_kecerdasan[tipe_cerdas] = (old_value + cf_value) / (1 - min(abs(old_value), abs(cf_value)))
+                log_kecerdasan[tipe_cerdas].append(
+                    f"CF = ({old_value:.2f} + {cf_value:.2f}) / (1 - min(|{old_value:.2f}|, |{cf_value:.2f}|)) = {cf_kecerdasan[tipe_cerdas]:.2f}"
+                )
         else:
             cf_kecerdasan[tipe_cerdas] = cf_value
             log_kecerdasan[tipe_cerdas] = [f"CF Awal = {cf_evidence:.2f} * {cf_pakar:.2f} = {cf_value:.2f}"]
@@ -88,8 +102,21 @@ for statement, answer in data_prodi:
         cf_value = cf_evidence * cf_pakar
         if jurusan in cf_jurusan:
             old_value = cf_jurusan[jurusan]
-            cf_jurusan[jurusan] = old_value + cf_value * (1 - old_value)
-            log_jurusan[jurusan].append(f"CF = {old_value:.2f} + ({cf_value:.2f} * (1 - {old_value:.2f}) = {cf_jurusan[jurusan]:.2f}")
+            if old_value >= 0 and cf_value >= 0:  # Keduanya positif
+                cf_jurusan[jurusan] = old_value + cf_value * (1 - old_value)
+                log_jurusan[jurusan].append(
+                    f"CF = {old_value:.2f} + ({cf_value:.2f} * (1 - {old_value:.2f})) = {cf_jurusan[jurusan]:.2f}"
+                )
+            elif old_value < 0 and cf_value < 0:  # Keduanya negatif
+                cf_jurusan[jurusan] = old_value + cf_value * (1 + old_value)
+                log_jurusan[jurusan].append(
+                    f"CF = {old_value:.2f} + ({cf_value:.2f} * (1 + {old_value:.2f})) = {cf_jurusan[jurusan]:.2f}"
+                )
+            else:  # Satu positif, satu negatif
+                cf_jurusan[jurusan] = (old_value + cf_value) / (1 - min(abs(old_value), abs(cf_value)))
+                log_jurusan[jurusan].append(
+                    f"CF = ({old_value:.2f} + {cf_value:.2f}) / (1 - min(|{old_value:.2f}|, |{cf_value:.2f}|)) = {cf_jurusan[jurusan]:.2f}"
+                )
         else:
             cf_jurusan[jurusan] = cf_value
             log_jurusan[jurusan] = [f"CF Awal = {cf_evidence:.2f} * {cf_pakar:.2f} = {cf_value:.2f}"]
