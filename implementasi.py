@@ -158,45 +158,54 @@ if selected == "Halaman Utama":
     cf_jurusan = {k: round(v * 100, 2) for k, v in cf_jurusan.items()}
 
     #-------------------------------------------------------------------------------------------------------------------------
-    # Menampilkan hasil kecerdasan dan jurusan
-    col1, col2 = st.columns(2)
-    # Menempatkan tombol
-    with col1:
-        st.button("Lihat Hasil Kecerdasan")
-    with col2:
-        st.button("Lihat Hasil Jurusan")
+    # Menampilkan hasil kecerdasan dan jurusan (dengan toggle)
+    if "show_kecerdasan" not in st.session_state:
+        st.session_state.show_kecerdasan = False
+    if "show_jurusan" not in st.session_state:
+        st.session_state.show_jurusan = False
 
-    # Menampilkan hasil kecerdasan dan jurusan
+    col1, col2 = st.columns(2)
+    # Menempatkan tombol toggle
+    with col1:
+        if st.button("Tampilkan/Sembunyikan Hasil Kecerdasan"):
+            st.session_state.show_kecerdasan = not st.session_state.show_kecerdasan
+
+    with col2:
+        if st.button("Tampilkan/Sembunyikan Hasil Jurusan"):
+            st.session_state.show_jurusan = not st.session_state.show_jurusan
+
     col_left, col_right = st.columns(2)
     # Menampilkan hasil kecerdasan di kolom kiri (3 terbaik)
     with col_left:
-        st.subheader("Hasil Kecerdasan")
-        sorted_kecerdasan = sorted(cf_kecerdasan.items(), key=lambda x: x[1], reverse=True)[:3]
-        for i, (tipe, nilai) in enumerate(sorted_kecerdasan):
-            deskripsi = deskripsi_kecerdasan.get(tipe)
-            st.write(f"🎓{i + 1}. {tipe}: {nilai:.2f}%")
-            st.caption(deskripsi)
+        if st.session_state.show_kecerdasan:
+            st.subheader("Hasil Kecerdasan")
+            sorted_kecerdasan = sorted(cf_kecerdasan.items(), key=lambda x: x[1], reverse=True)[:3]
+            for i, (tipe, nilai) in enumerate(sorted_kecerdasan):
+                deskripsi = deskripsi_kecerdasan.get(tipe)
+                st.write(f"🎓 {i + 1}. {tipe}: {nilai:.2f}%")
+                st.caption(deskripsi)
 
-        # Menampilkan perhitungan Certainty Factor
-        with st.expander("Lihat Detail Perhitungan CF Kecerdasan"):
-            for tipe, logs in log_kecerdasan.items():
-                st.write(f"**{tipe}**")
-                for log in logs:
-                    st.write(f"- {log}")
+            # Menampilkan perhitungan Certainty Factor
+            with st.expander("Lihat Detail Perhitungan CF Kecerdasan"):
+                for tipe, logs in log_kecerdasan.items():
+                    st.write(f"**{tipe}**")
+                    for log in logs:
+                        st.write(f"- {log}")
 
     # Menampilkan hasil jurusan di kolom kanan (3 terbaik)
     with col_right:
-        st.subheader("Hasil Rekomendasi Jurusan")
-        sorted_jurusan = sorted(cf_jurusan.items(), key=lambda x: x[1], reverse=True)[:3] 
-        for i, (jurusan, nilai) in enumerate(sorted_jurusan):
-            st.write(f"🎓 {i + 1}. {jurusan}: {nilai:.2f}%")
+        if st.session_state.show_jurusan:
+            st.subheader("Hasil Rekomendasi Jurusan")
+            sorted_jurusan = sorted(cf_jurusan.items(), key=lambda x: x[1], reverse=True)[:3] 
+            for i, (jurusan, nilai) in enumerate(sorted_jurusan):
+                st.write(f"🎓 {i + 1}. {jurusan}: {nilai:.2f}%")
 
-        # Menampilkan perhitungan Certainty Factor
-        with st.expander("Lihat Detail Perhitungan CF Jurusan"):
-            for jurusan, logs in log_jurusan.items():
-                st.write(f"**{jurusan}**")
-                for log in logs:
-                    st.write(f"- {log}")
+            # Menampilkan perhitungan Certainty Factor
+            with st.expander("Lihat Detail Perhitungan CF Jurusan"):
+                for jurusan, logs in log_jurusan.items():
+                    st.write(f"**{jurusan}**")
+                    for log in logs:
+                        st.write(f"- {log}")
 
 #=========================================================================================================================
 # Page Deskripsi Kecerdasan
