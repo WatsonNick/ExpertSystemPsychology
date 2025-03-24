@@ -165,10 +165,10 @@ if selected == "Halaman Utama":
     if "show_jurusan" not in st.session_state:
         st.session_state.show_jurusan = False
     with col1:
-        if st.button("Tampilkan Hasil Kecerdasan"):
+        if st.button("Lihat Hasil Kecerdasan"):
             st.session_state.show_kecerdasan = not st.session_state.show_kecerdasan
     with col2:
-        if st.button("Tampilkan Hasil Jurusan"):
+        if st.button("Lihat Hasil Jurusan"):
             st.session_state.show_jurusan = not st.session_state.show_jurusan
 
     col_left, col_right = st.columns(2)
