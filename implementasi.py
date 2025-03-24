@@ -92,8 +92,8 @@ if selected == "Halaman Utama":
                     )
                     response = st.radio("", list(daftar_skor.keys()), key=f"{statement}_{i}", horizontal=True, index=len(daftar_skor) // 2)
                     st.write("")
-                    user_answers[statement] = daftar_skor[response]  
-                             
+                    user_answers[statement] = daftar_skor[response] 
+                                 
     #-------------------------------------------------------------------------------------------------------------------------
     # Hitung Certainty Factor untuk setiap kecerdasan
     cf_kecerdasan = {}
@@ -159,44 +159,54 @@ if selected == "Halaman Utama":
 
     #-------------------------------------------------------------------------------------------------------------------------
     # Menampilkan hasil kecerdasan dan jurusan
+    if "show_kecerdasan" not in st.session_state:
+        st.session_state.show_kecerdasan = False
+    if "show_jurusan" not in st.session_state:
+        st.session_state.show_jurusan = False
+    st.write("\n")
+
     col1, col2 = st.columns(2)
     # Menempatkan tombol
     with col1:
-        st.button("Lihat Hasil Kecerdasan")
+        if st.button("Lihat Hasil Kecerdasan"):
+            st.session_state.show_kecerdasan = True
     with col2:
-        st.button("Lihat Hasil Jurusan")
+        if st.button("Lihat Hasil Jurusan"):
+            st.session_state.show_jurusan = True
 
     # Menampilkan hasil kecerdasan dan jurusan
     col_left, col_right = st.columns(2)
     # Menampilkan hasil kecerdasan di kolom kiri (3 terbaik)
     with col_left:
-        st.subheader("Hasil Kecerdasan")
-        sorted_kecerdasan = sorted(cf_kecerdasan.items(), key=lambda x: x[1], reverse=True)[:3]
-        for i, (tipe, nilai) in enumerate(sorted_kecerdasan):
-            deskripsi = deskripsi_kecerdasan.get(tipe)
-            st.write(f"🎓{i + 1}. {tipe}: {nilai:.2f}%")
-            st.caption(deskripsi)
+        if st.session_state.show_kecerdasan:
+            st.subheader("Hasil Kecerdasan")
+            sorted_kecerdasan = sorted(cf_kecerdasan.items(), key=lambda x: x[1], reverse=True)[:3]
+            for i, (tipe, nilai) in enumerate(sorted_kecerdasan):
+                deskripsi = deskripsi_kecerdasan.get(tipe)
+                st.write(f"🎓{i + 1}. {tipe}: {nilai:.2f}%")
+                st.caption(deskripsi)
 
-        # Menampilkan perhitungan Certainty Factor
-        with st.expander("Lihat Detail Perhitungan CF Kecerdasan"):
-            for tipe, logs in log_kecerdasan.items():
-                st.write(f"**{tipe}**")
-                for log in logs:
-                    st.write(f"- {log}")
+            # Menampilkan perhitungan Certainty Factor
+            with st.expander("Lihat Detail Perhitungan CF Kecerdasan"):
+                for tipe, logs in log_kecerdasan.items():
+                    st.write(f"**{tipe}**")
+                    for log in logs:
+                        st.write(f"- {log}")
 
     # Menampilkan hasil jurusan di kolom kanan (3 terbaik)
     with col_right:
-        st.subheader("Hasil Rekomendasi Jurusan")
-        sorted_jurusan = sorted(cf_jurusan.items(), key=lambda x: x[1], reverse=True)[:3] 
-        for i, (jurusan, nilai) in enumerate(sorted_jurusan):
-            st.write(f"🎓 {i + 1}. {jurusan}: {nilai:.2f}%")
+        if st.session_state.show_jurusan:
+            st.subheader("Hasil Rekomendasi Jurusan")
+            sorted_jurusan = sorted(cf_jurusan.items(), key=lambda x: x[1], reverse=True)[:3] 
+            for i, (jurusan, nilai) in enumerate(sorted_jurusan):
+                st.write(f"🎓 {i + 1}. {jurusan}: {nilai:.2f}%")
 
-        # Menampilkan perhitungan Certainty Factor
-        with st.expander("Lihat Detail Perhitungan CF Jurusan"):
-            for jurusan, logs in log_jurusan.items():
-                st.write(f"**{jurusan}**")
-                for log in logs:
-                    st.write(f"- {log}")
+            # Menampilkan perhitungan Certainty Factor
+            with st.expander("Lihat Detail Perhitungan CF Jurusan"):
+                for jurusan, logs in log_jurusan.items():
+                    st.write(f"**{jurusan}**")
+                    for log in logs:
+                        st.write(f"- {log}")
 
 #=========================================================================================================================
 # Page Deskripsi Kecerdasan
