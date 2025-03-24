@@ -92,7 +92,8 @@ if selected == "Halaman Utama":
                     response = st.radio("", list(daftar_skor.keys()), key=f"{statement}_{i}", horizontal=True, index=len(daftar_skor) // 2)
                     st.write("")
                     user_answers[statement] = daftar_skor[response]              
-#-------------------------------------------------------------------------------------------------------------------------
+    
+    #-------------------------------------------------------------------------------------------------------------------------
     # Hitung Certainty Factor untuk setiap kecerdasan
     cf_kecerdasan = {}
     log_kecerdasan = {}
@@ -180,7 +181,9 @@ if selected == "Halaman Utama":
             st.subheader("Hasil Kecerdasan")
             sorted_kecerdasan = sorted(cf_kecerdasan.items(), key=lambda x: x[1], reverse=True)[:3]
             for i, (tipe, nilai) in enumerate(sorted_kecerdasan):
+                deskripsi = deskripsi_kecerdasan.get(tipe)
                 st.write(f"🎓{i + 1}. {tipe}: {nilai:.2f}%")
+                st.caption(deskripsi)
 
             # Menampilkan perhitungan Certainty Factor
             with st.expander("Lihat Detail Perhitungan CF Kecerdasan"):
@@ -203,7 +206,7 @@ if selected == "Halaman Utama":
                     st.write(f"**{jurusan}**")
                     for log in logs:
                         st.write(f"- {log}")
-
+                        
 #=========================================================================================================================
 # Page Deskripsi Kecerdasan
 ciri_contoh_kecerdasan = {
