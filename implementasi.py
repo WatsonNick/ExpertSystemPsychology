@@ -158,20 +158,17 @@ if selected == "Halaman Utama":
     cf_jurusan = {k: round(v * 100, 2) for k, v in cf_jurusan.items()}
 
     #-------------------------------------------------------------------------------------------------------------------------
-    # Menampilkan hasil kecerdasan dan jurusan (dengan toggle)
+    # Menampilkan hasil kecerdasan dan jurusan
+    col1, col2 = st.columns(2)  
     if "show_kecerdasan" not in st.session_state:
         st.session_state.show_kecerdasan = False
     if "show_jurusan" not in st.session_state:
         st.session_state.show_jurusan = False
-
-    col1, col2 = st.columns(2)
-    # Menempatkan tombol toggle
     with col1:
-        if st.button("Tampilkan/Sembunyikan Hasil Kecerdasan"):
+        if st.button("Tampilkan Hasil Kecerdasan"):
             st.session_state.show_kecerdasan = not st.session_state.show_kecerdasan
-
     with col2:
-        if st.button("Tampilkan/Sembunyikan Hasil Jurusan"):
+        if st.button("Tampilkan Hasil Jurusan"):
             st.session_state.show_jurusan = not st.session_state.show_jurusan
 
     col_left, col_right = st.columns(2)
