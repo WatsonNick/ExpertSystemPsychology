@@ -84,7 +84,7 @@ if selected == "Halaman Utama":
                             background-color: #f9f9f9;
                             overflow: hidden;
                             line-height: 1;">
-                            <a style="margin: 0;">{i + 1}. {statement}</a>
+                            <p style="margin: 0;">{i + 1}. {statement}</p>
                         </div>
                         """, 
                         unsafe_allow_html=True
